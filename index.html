@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="reponsive.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0133abc278.js" crossorigin="anonymous"></script>
+    <title>???</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="row">
+            <div class="navbar">
+                <div class="navbar-logo"><img src="assets/logo.png" alt="navbar-logo"></div>
+                <div class="navbar-menu">
+                    <div class="navbar-menu-item">Home</div>
+                    <div class="navbar-menu-item">About</div>
+                    <div class="navbar-menu-item">Services</div>
+                    <div class="navbar-menu-item">Contact</div>
+                </div>
+
+                <div class="nav-noti"><span class="hello">Xin chào! {name}</span><i class="fa-solid fa-bell"></i></div>
+                <!-- <div class="nav-user"><i class="fa-regular fa-circle-user"></i></div> -->
+            </div>
+            <div class="main_container grid">
+                <div class="left_side large-2-4 medium-0 small-0">
+                    <div class="club-logo">
+                        <img src="assets/miku-footer.jpg" alt="club-logo">
+                    </div>
+                    <div class="menu-container">
+                        <div class="menu-list">
+                            <div class="menu-item home-page"><i class="fa-solid fa-house"></i> Trang chủ</div>
+                            <div class="menu-item personal-info"><i class="fa-solid fa-user"></i> Thông tin cá nhân
+                            </div>
+                            <div class="menu-item Leader-rules"><i class="fa-solid fa-address-book"></i> BCN và Điều lệ
+                                hoạt động CLB
+                            </div>
+                            <div class="menu-item tournament-info"><i class="fa-solid fa-circle-question"></i> Thông tin
+                                giải đấu</div>
+                            <div class="menu-item treatment"><i class="fa-solid fa-credit-card"></i> Ưu đãi và quyền lợi
+                            </div>
+                            <div class="menu-item settings"><i class="fa-solid fa-gear"></i> Cài đặt</div>
+                        </div>
+
+                        <div class="log-out menu-item">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i> Đăng xuất
+                        </div>
+                    </div>
+                </div>
+                <button class="toggle-btn" id="toggleSidebar">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <div class="right_side large-9-6 medium-12 small-12">
+                    <div class="home-page-container">
+                        <!-- Header -->
+                        <div class="home-page-header">
+                            <div class="personal-info-menu hidden" id="personal-info-menu">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+
+                            <div class="avatar-wrapper">
+                                <img src="assets/miku-footer.jpg" alt="avatar" class="avatar">
+                            </div>
+                            <h3 class="name">Nguyễn Văn A</h3>
+                            <p class="position">Hội viên chính thức</p>
+                        </div>
+
+                        <!--  HOME PAGE DETAILS -->
+                        <div id="home-page-details" class="content-section">
+                            <div class="info-row">
+                                <span class="label"><i class="fa-solid fa-phone"></i></span>
+                                <span class="value">0123456789</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label"><i class="fa-solid fa-envelope"></i></span>
+                                <span class="value">abc@email.com</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label"><i class="fa-solid fa-id-card"></i></span>
+                                <span class="value">VGA12345</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label"><i class="fa-solid fa-location-dot"></i></span>
+                                <span class="value">120 Yên Lãng, Hà Nội</span>
+                            </div>
+
+                            <div class="qr-code">
+                                <img src="assets/qr_code.png" alt="QR code">
+                            </div>
+                        </div>
+
+                        <!-- Personal Info Details -->
+                        <div id="personal-info-details" class="content-section hidden">
+                            <div class="info-row">
+                                <span class="label">Ngày sinh</span>
+                                <span class="value">10/04/1981</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label">Khoa</span>
+                                <span class="value">Xây dựng</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label">Khoa học</span>
+                                <span class="value">2000</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label">Size áo</span>
+                                <span class="value">M</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="Leader-rules-container"></div>
+                    <div class="tournament-info-container"></div>
+                    <div class="treatment-container hidden">
+                        <div class="treatment-gallery hidden">
+                            <img src="assets/image.png" alt="Image 1" class="treatment-img">
+                            <!-- <img src="assets/image2.png" alt="Image 2" class="treatment-img"> -->
+                            <!-- <img src="assets/image3.png" alt="Image 3" class="treatment-img"> -->
+                            <!-- Thêm ảnh khác -->
+                        </div>
+
+                        <!-- Zoom overlay -->
+                        <!-- <div class="treatment-zoom hidden">
+                            <span class="close-zoom">&times;</span>
+                            <img src="assets/image.png" alt="Zoomed Image" class="zoomed-img">
+                        </div> -->
+                    </div>
+
+                    <div class="setting-container content-section hidden">
+                        <h3>Cài đặt</h3>
+
+                        <!-- Language -->
+                        <div class="setting-row">
+                            <span class="label">Ngôn ngữ:</span>
+                            <select id="language-select">
+                                <option value="vi">Tiếng Việt</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+
+                        <!-- Background -->
+                        <div class="setting-row">
+                            <span class="label">Hình nền:</span>
+                            <select id="background-select">
+                                <option value="blue">Xanh</option>
+                                <option value="gray">Xám</option>
+                            </select>
+                        </div>
+
+                        <!-- Change Password -->
+                        <div class="setting-row">
+                            <button id="change-password-btn">Đổi mật khẩu</button>
+                        </div>
+
+                        <!-- Delete Account -->
+                        <div class="setting-row">
+                            <button id="delete-account-btn" class="danger">Xóa tài khoản</button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- <img src="assets/golf_background.png" alt="main_background"> -->
+
+            </div>
+            <!-- <div class="footer"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ipsa ullam sint ducimus minus veniam, ipsam id numquam nisi accusamus doloribus nihil possimus modi quidem, nam nostrum ad, impedit explicabo.</div> -->
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
