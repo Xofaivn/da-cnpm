@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BKTutor | Profile</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/tutor_profile.css">
+</head>
+
+<body>
+    <header class="nav">
+        <div class="container nav-inner">
+            <a class="nav-brand" href="/student.html" aria-label="student Home">
+                <img src="/static/images/hcmut.svg" alt="BKTutor">
+                <span>BKTutor</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/student.html">Home</a>
+                <a href="/profile.html" class="active">Profile</a>
+            </nav>
+            <div class="spacer"></div>
+            <button id="logoutBtn" class="btn primary" type="button">Log out</button>
+        </div>
+    </header>
+
+    <main class="tutor-wrap">
+        <div class="container profile-grid">
+            <!-- Left: profile -->
+            <section class="panel">
+                <div class="profile-card">
+                    <div class="avatar-large" id="profile-avatar"><img src="/static/images/miku-footer.jpg"
+                            alt="tutor-avt"></div>
+                    <div class="profile-main-text">
+                        <div class="profile-name" id="profile-name">Tutor</div>
+                        <div class="profile-line">Email: <span id="profile-email">-</span></div>
+                        <div class="profile-line">ID: <span id="profile-id">-</span></div>
+                        <div class="profile-line">Major: <span id="profile-major">-</span></div>
+                    </div>
+
+                </div>
+                <div class="profile-teaching-mode">
+                    <div class="btn small primary">In-person</div>
+                    <div class="btn small primary">Online</div>
+                </div>
+                <div class="profile-section">
+                    <div class="align">
+                        <h4 class="profile-subtitle">Bio</h4>
+                    </div>
+                    <div class="profile-list">
+                        <div class="profile-item" id="profile-bio">No bio yet.</div>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <div class="align">
+                        <h4 class="profile-subtitle">Skills</h4>
+
+                    </div>
+                    <div class="align">
+                        <h4 class="profile-subtitle">Languages</h4>
+                        <div class="profile-subtitle"> Programming</div>
+                        <div class="profile-subtitle"> Algorithms</div>
+                    </div>
+                    <div class="align">
+                        <h4 class="profile-subtitle">Courses</h4>
+                        <div class="profile-subtitle"> Data Structures</div>
+                        <div class="profile-subtitle"> Databases</div>
+                    </div>
+                </div>
+            </section>
+            <!-- Right: Manage tutor profile -->
+            <section class="panel tutor-manage-panel">
+                <h3>Manage Tutor Profile</h3>
+
+                <!-- Avatar upload -->
+                <div class="form-group">
+                    <label>Display Photo</label>
+                    <div class="avatar-preview" id="avatar-preview"><img src="/static/images/miku-footer.jpg"
+                            alt="tutor-avt"></div>
+                    <input type="file" id="avatar-input" accept="image/*">
+                    <button type="button" id="avatar-clear" class="btn ghost small">Clear</button>
+                    <small class="muted">Max size: 2MB. JPG/PNG only.</small>
+                </div>
+
+                <!-- Bio -->
+                <div class="form-group">
+                    <label for="bio-input">Bio <span id="bio-count">0/500</span></label>
+                    <textarea id="bio-input" rows="5" maxlength="500" placeholder="Enter your bio..."></textarea>
+                </div>
+
+                <!-- Teaching modes -->
+                <div class="form-group">
+                    <label>Teaching Modes</label>
+                    <div class="toggle-modes">
+                        <button type="button" class="btn mode-btn" data-mode="in-person">In-person</button>
+                        <button type="button" class="btn mode-btn" data-mode="online">Online</button>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="form-group">
+                    <label>Skills</label>
+                    <div class="chip-input">
+                        <input type="text" id="skill-input" placeholder="Add a skill">
+                        <div class="chip-list" id="skills-list">
+                            <div class="chip">Programming<span class="remove-chip">&times;</span></div>
+                            <div class="chip">Algorithms<span class="remove-chip">&times;</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Languages -->
+                <div class="form-group">
+                    <label>Languages</label>
+                    <div class="chip-input">
+                        <input type="text" id="language-input" placeholder="Add a language">
+                        <div class="chip-list" id="languages-list">
+                            <div class="chip">English<span class="remove-chip">&times;</span></div>
+                            <div class="chip">Vietnamese<span class="remove-chip">&times;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Supported Courses -->
+                <div class="form-group">
+                    <label>Supported Courses</label>
+                    <div class="chip-input">
+                        <input type="text" id="course-input" placeholder="Add a course">
+                        <div class="chip-list" id="courses-list">
+                            <div class="chip">Data Structures<span class="remove-chip">&times;</span></div>
+                            <div class="chip">Databases<span class="remove-chip">&times;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="form-actions">
+                    <button type="button" class="btn primary" id="save-profile">Save Profile</button>
+                    <button type="button" class="btn ghost" id="preview-card">Preview Public Card</button>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between;">
+            <div>(c) 2025 HCMUT - Privacy - Terms</div>
+            <div>Support: <a href="mailto:support@hcmut.edu.vn">support@hcmut.edu.vn</a></div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="/static/js/tutor_profile.js"></script>
+</body>
+
+</html>
