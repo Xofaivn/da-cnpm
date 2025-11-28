@@ -551,7 +551,7 @@ td {
     border: none;
     cursor: pointer;
     font-weight: 500;
-    color: #64748b;
+    color: var(--text);
     border-bottom: 2px solid transparent;
     margin-bottom: -2px;
     transition: all 0.2s;
@@ -562,7 +562,7 @@ td {
 }
 
 .tab.active {
-    color: #1e3a8a;
+    color: white;
     border-bottom-color: #1e3a8a;
 }
 
