@@ -356,6 +356,16 @@ function saveSlot(e) {
         status: 'available'
     };
 
+    if (slotData.recurrence === 'once' && slotData.date) {
+        const slotDate = new Date(slotData.date);
+        const slotDay = slotDate.toLocaleString('en-US', { weekday: 'long' });
+
+        if (slotDay !== slotData.day) {
+            showAlert('Date does not match selected day', 'warning');
+            return;
+        }
+    }
+
     // Validation
     const hour = parseInt(slotData.startTime.split(':')[0]);
     if (hour < 7 || hour >= 22) {
