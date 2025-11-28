@@ -1,7 +1,8 @@
+// thêm chip vào DOM, hoàn toàn không lưu vào backend hay database.
+
 function addChip(listEl, value) {
     if (!value) return;
 
-    // kiểm tra duplicate
     const exists = Array.from(listEl.children).some(chip => chip.textContent.trim().startsWith(value));
     if (exists) return;
 
